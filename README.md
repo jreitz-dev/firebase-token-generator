@@ -7,6 +7,21 @@
 
 > Quickly generate jwts for a firebase project
 
+## Build
+
+`docker build -t fbg .`
+
+## Run
+
+### Generating a token
+
+`docker run fbg --email EMAIL --password PASSWORD --key API_KEY_FIREBASE`
+
+### Decode the token
+
+`docker run fbg --email EMAIL --password PASSWORD --key API_KEY_FIREBASE -d`
+
+
 ## Author
 
 👤 **Johannes Konze <johannes.konze@gute-weine.com>**
