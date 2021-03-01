@@ -8,12 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
+        id: checkout
         uses: actions/checkout@v2
       - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1
+        id: docker_build
+        uses: docker/build-push-action@v2
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: Lobenbergs-GUTE-WEINE/firebase-token-generator/firebase-token-generator
-          tag_with_ref: true
+          push: true
+          tags: Lobenbergs-GUTE-WEINE/firebase-token-generator:latest
