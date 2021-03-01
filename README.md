@@ -1,36 +1,37 @@
-<h1 align="center">Welcome to firebase-token-generator 👋</h1>
-<p>
-  <a href="https://www.npmjs.com/package/firebase-token-generator" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/firebase-token-generator.svg">
-  </a>
+<h1 align="center">🔥 Firebase Token Generator 🔥</h1>
+<p align="center">
+<img src="https://i.ibb.co/LnRpFQS/firebase-docker.png" alt="firebase-docker" />
 </p>
 
-> Quickly generate jwts for a firebase project
+> Quickly generate JWTs for a firebase project
 
-## Build
+## Usage
 
-`docker build -t fbg .`
-
-## Run
+To obtain the web api key go to:   
+https://console.firebase.google.com/project/YOUR_PROJECT/settings/general/
 
 ### Generating a token
 
-`docker run fbg --email EMAIL --password PASSWORD --key API_KEY_FIREBASE`
+`docker run firebase-token-generator --email EMAIL --password PASSWORD --key API_KEY_FIREBASE`
 
-### Decode the token
+### Generate a decoded token
 
-`docker run fbg --email EMAIL --password PASSWORD --key API_KEY_FIREBASE -d`
+`docker run firebase-token-generator --email EMAIL --password PASSWORD --key API_KEY_FIREBASE -d`
+
+
+## Build
+
+### Requirements
+
+* docker
+
+### Building
+
+To build a local version of this image run:   
+`docker build -t firebase-token-generator .`
 
 
 ## Author
 
-👤 **Johannes Konze <johannes.konze@gute-weine.com>**
-
+👤 **Johannes Konze**
 * Github: [@jkonze](https://github.com/jkonze)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
